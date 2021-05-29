@@ -1,0 +1,305 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* reset css end */
+
+/* roboto-300 - cyrillic_latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Roboto Light'), local('Roboto-Light'),
+         url('../fonts/roboto-v20-cyrillic_latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/roboto-v20-cyrillic_latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* roboto-regular - cyrillic_latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'),
+         url('../fonts/roboto-v20-cyrillic_latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/roboto-v20-cyrillic_latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* roboto-500 - cyrillic_latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Roboto Medium'), local('Roboto-Medium'),
+         url('../fonts/roboto-v20-cyrillic_latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/roboto-v20-cyrillic_latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+html { 
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: normal;
+    color: #C4C4C4;
+    background-color: #181818;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    /* background-color: #8b4040; */
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+}
+
+.header__wrapper {
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pencil__logo {
+    padding-right: 181px;
+}
+
+.pencil__logo img {
+    width: 28px;
+}
+
+
+.header__nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav__item {
+    margin-right: 40px;
+}
+
+.nav__item:last-child {
+    margin-right: 0px;
+}
+
+.nav__link {
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.205em;
+    text-decoration: none;
+    color: #C4C4C4;
+    text-transform: uppercase;
+}
+
+.nav__item:hover {
+    opacity: 0.5;
+}
+
+.gallery {
+    width: 100%;
+    height: 100vh;
+    /* background-color: #1818; */
+    display: flex;
+    /* align-items: center; */
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+}
+
+.gallery__text {
+    /* width: 1200px; */
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-49%,-50%);
+    font-size: 16vw;
+    text-transform: uppercase;
+    font-weight: 599;
+    pointer-events: none;
+    z-index: 3;
+    /* text-align: center; */
+    letter-spacing: 0.18em;  
+}
+.outline-text {
+    color: transparent;
+    -webkit-text-stroke: 1px #C4C4C4;
+    mix-blend-mode: overlay;
+}
+
+.arrow__svg {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+    mix-blend-mode: overlay;
+}
+
+.footer {
+    width: 100%;
+    background-color: #363636;;
+}
+
+.footer__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__boxes {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+}
+
+.footer__box{
+    grid-column: span 1;    
+}
+.footer__text {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 50px;
+    letter-spacing: 0.2em;
+    color: #C4C4C4;
+}
+
+.box__left {
+    text-align: left;
+}
+
+.box__right {
+    text-align: right;
+}
+
+.box__center {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin: 0 auto;
+}
+
+.slider {
+    position: relative;
+  height: 100%;
+  width: 100%;
+  cursor: grab;
+}
+
+.slider.is-grabbing {
+    cursor: grabbing;
+}
+
+.slider__inner{
+    position: absolute;
+    height: 100vh;
+    pointer-events: none;
+  }
+
+  .slide {
+    /* overflow: hidden; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30vw;
+    cursor: pointer;
+    /* padding: 3rem; */
+  }
+
+  .slide img {
+      max-width: 100%;
+      z-index: 10;
+  }
+
+.cursor-wrap{
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+  
+.cursor{
+    position: fixed;
+    top: -30px;
+    left: -30px;
+}
+
+.slide1 {
+    padding-top: 0;
+    padding-left: 2rem;
+}
+
+.slide2 {
+    padding-top: 20rem;
+}
+
+.slide4 {
+    padding-bottom: 20rem;
+    padding-left: 3rem;
+    padding-right: 5rem;
+}
+
+.slide4 {
+    
+}
+
